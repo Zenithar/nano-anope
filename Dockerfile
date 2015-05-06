@@ -22,8 +22,8 @@ RUN apk add --update -t build-deps make cmake gcc g++ git wget bison openssl-dev
     && adduser -G anope -D anope \
     && chown -R anope:anope /opt/services \
     && rm -Rf /src \
-    && apk del --purge build-deps
-    && apk add --update libstdc++
+    && apk del --purge build-deps \
+    && apk add --update libstdc++ \
     && rm -rf /var/cache/apk/*
 
 ADD run.sh /tmp/run.sh
