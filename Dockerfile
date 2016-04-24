@@ -1,13 +1,13 @@
-FROM alpine:edge
+FROM frolvlad/alpine-glibc:latest
 MAINTAINER Thibault NORMAND <me@zenithar.org>
 
 WORKDIR /src
 
 RUN apk add --update -t build-deps make cmake gcc g++ git wget bison openssl-dev \
     && apk add -u musl && rm -rf /var/cache/apk/* \
-    && wget https://github.com/anope/anope/releases/download/2.0.2/anope-2.0.2-source.tar.gz \
-    && tar zxvf anope-2.0.2-source.tar.gz \
-    && cd /src/anope-2.0.2-source \
+    && wget https://github.com/anope/anope/releases/download/2.0.3/anope-2.0.3-source.tar.gz \
+    && tar zxvf anope-2.0.3-source.tar.gz \
+    && cd /src/anope-2.0.3-source \
     && mkdir build \
     && cd build \
     && cmake \
