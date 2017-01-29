@@ -5,9 +5,9 @@ WORKDIR /src
 
 RUN apk add --update -t build-deps make cmake gcc g++ git wget bison openssl-dev \
     && apk add -u musl && rm -rf /var/cache/apk/* \
-    && wget https://github.com/anope/anope/releases/download/2.0.4/anope-2.0.4-source.tar.gz \
-    && tar zxvf anope-2.0.4-source.tar.gz \
-    && cd /src/anope-2.0.4-source \
+    && wget https://github.com/anope/anope/releases/download/2.0.5/anope-2.0.5-source.tar.gz \
+    && tar zxvf anope-2.0.5-source.tar.gz \
+    && cd /src/anope-2.0.5-source \
     && mkdir build \
     && cd build \
     && cmake \
